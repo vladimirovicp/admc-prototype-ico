@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <title>Таблица с иконками</title>
   <style>
     body { font-family: system-ui, sans-serif; padding: 24px; background: #f7f8fb; }
@@ -10,17 +11,34 @@
     table { width: 100%; border-collapse: collapse; }
     thead th { text-align: left; padding: 10px 12px; font-weight: 600; font-size: 14px; border-bottom: 2px solid #eef1f6; }
     tbody td { padding: 10px 12px; border-bottom: 1px solid #f1f4f8; font-size: 14px; vertical-align: middle; }
-    tbody > tr {background-color: #e1e1e1;}
+    /* tbody > tr {background-color: #e1e1e1;} */
     tbody > tr:nth-of-type(even) {background-color: rgb(237 238 242);}
     tbody tr:hover td { background: #fbfdff; }
     .muted { color: #6b7280; font-size: 13px; }
     .center { text-align: center; width: 80px; }
     /* img.icon-16 { width:16px; height:16px; }
     img.icon-24 { width:24px; height:24px; } */
+
+    .screenshot{
+      margin: 0 auto;
+    }
+
+    .screenshot .center{
+      width: 100%;
+      text-align: center;
+      padding-bottom: 20px;
+    }
   </style>
 </head>
 <body>
 
+  <h2>На представленных ниже изображениях продемонстрирован внешний вид программы с новыми иконками.</h2>
+  <div class="screenshot">
+    <div class="center"><img src="./img/main/v1-screenshot/header-1.jpg" width="1509" height="136"></div>
+    <div class="center"><img src="./img/main/v1-screenshot/header-2.jpg"></div>
+  </div>
+
+  <h2>Ниже приведена таблица с новыми иконками, их соответствующими переменными и описанием.</h2>
   <div class="table-card">
     <h2>Таблица с иконками SVG</h2>
     <div id="table-container"></div>
@@ -56,8 +74,11 @@
       { title: "ADMC_CATEGORY_FSMO_ROLE", nameImg: "admc-category-fsmo-role", desc: "Отдельная FSMO роль (например, Schema Master, Domain Naming Master, RID Master, PDC Emulator, Infrastructure Master). Используется для отображения конкретных FSMO ролей в интерфейсе. Переменная для информации о домене" },
       { title: "ADMC_CATEGORY_DOMAIN_INFO_ITEM", nameImg: "admc-category-domain-info-item", desc: "Элемент информации о домене. Отображает основную информацию о подключенном домене Active Directory. Используется в DomainInfoImpl для отображения информации о домене." },
       { title: "ADMC_CATEGORY_GO_PREVIOUS_ACTION", nameImg: "admc-category-go-previous-action", desc: "Действие навигации 'Назад'. Позволяет вернуться к предыдущему элементу в истории навигации." },
+      { title: "", nameImg: "admc-category-go-previous-action-1", desc: "" },
       { title: "ADMC_CATEGORY_GO_NEXT_ACTION", nameImg: "admc-category-go-next-action", desc: "Действие навигации 'Вперед'. Позволяет перейти к следующему элементу в истории навигации." },
+      { title: "", nameImg: "admc-category-go-next-action-1", desc: "" },
       { title: "ADMC_CATEGORY_GO_UP_ACTION", nameImg: "admc-category-go-up-action", desc: "Действие навигации 'Вверх'. Позволяет перейти к родительскому элементу в иерархии." },
+      { title: "", nameImg: "admc-category-go-up-action-1", desc: "" },
       { title: "ADMC_CATEGORY_REFRESH_ACTION", nameImg: "admc-category-refresh-action", desc: "Действие обновления. Позволяет обновить текущий вид и получить актуальные данные из Active Directory." },
       { title: "ADMC_CATEGORY_MANUAL_ACTION", nameImg: "admc-category-manual-action", desc: "Действие справки/руководства. Открывает документацию или справочную информацию о приложении." },
       { title: "OBJECT_CATEGORY_BUILTIN", nameImg: "object-category-builtin", desc: "Представляет встроенный домен (Builtin Domain) в Active Directory. Это системный контейнер, который содержит встроенные группы безопасности домена, такие как Administrators, Users, Guests и другие предустановленные группы безопасности. Builtin Domain является частью каждого домена и содержит группы с предустановленными правами доступа. Используется для отображения и управления встроенными группами безопасности домена, которые имеют предустановленные права и не могут быть удалены." },
